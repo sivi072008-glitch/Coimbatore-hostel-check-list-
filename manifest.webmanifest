@@ -1,0 +1,14 @@
+{
+  "name": "Coimbatore Hostel & College Checklist",
+  "short_name": "Hostel Checklist",
+  "description": "A mobile-friendly hostel and college packing checklist for students moving to Coimbatore.",
+  "start_url": "./Coimbatore_Hostel_Packing_Checklist.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5EFE0",
+  "theme_color": "#0E5C58",
+  "icons": [
+    {"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packing for Coimbatore — Hostel &amp; College Checklist</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0E5C58">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Hostel Checklist">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5EFE0;
+    --paper:#FFFDF6;
+    --ink:#20302C;
+    --ink-soft:#5B675F;
+    --teal:#0E5C58;
+    --teal-dark:#08403D;
+    --marigold:#E2A13B;
+    --rust:#B23A48;
+    --line:#D9CDA9;
+    --line-soft:#E7DEC3;
+    --radius:14px;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      repeating-linear-gradient(0deg, rgba(14,92,88,0.028) 0px, rgba(14,92,88,0.028) 1px, transparent 1px, transparent 26px),
+      repeating-linear-gradient(90deg, rgba(14,92,88,0.028) 0px, rgba(14,92,88,0.028) 1px, transparent 1px, transparent 26px),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== HERO ===== */
+  .hero{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:56px 24px 28px;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(34px,6vw,54px);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--teal-dark);
+    line-height:1.06;
+  }
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--rust);}
+  .hero p.sub{
+    max-width:520px;
+    margin:16px auto 0;
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+
+  /* ===== ZIPPER PROGRESS ===== */
+  .zipper-wrap{
+    max-width:var(--maxw);
+    margin:20px auto 0;
+    padding:0 24px;
+  }
+  .zipper-stats{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
+  .zipper-stats strong{color:var(--teal-dark);font-size:14px;}
+  .zipper{
+    position:relative;
+    height:22px;
+    border-radius:11px;
+    background:
+      repeating-linear-gradient(90deg, var(--paper) 0 6px, var(--line) 6px 7px),
+      var(--paper);
+    border:1.5px solid var(--line);
+    overflow:hidden;
+  }
+  .zipper-fill{
+    position:absolute;
+    top:0;left:0;bottom:0;
+    width:0%;
+    background:linear-gradient(90deg, var(--teal), var(--teal-dark));
+    transition:width .4s ease;
+    border-radius:11px 0 0 11px;
+  }
+  .zipper-pull{
+    position:absolute;
+    top:50%;
+    width:26px;height:26px;
+    background:var(--marigold);
+    border:2px solid var(--teal-dark);
+    border-radius:6px;
+    transform:translate(-50%,-50%) rotate(45deg);
+    transition:left .4s ease;
+    box-shadow:0 2px 4px rgba(0,0,0,.2);
+  }
+
+  /* ===== TOP 20 BANNER ===== */
+  .banner{
+    max-width:var(--maxw);
+    margin:40px auto 0;
+    padding:0 24px;
+  }
+  .banner-inner{
+    background:var(--teal-dark);
+    color:#F5EFE0;
+    border-radius:var(--radius);
+    padding:26px 28px;
+    position:relative;
+    overflow:hidden;
+  }
+  .banner-inner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:repeating-linear-gradient(135deg, rgba(226,161,59,0.09) 0 10px, transparent 10px 20px);
+  }
+  .banner h2{
+    font-size:22px;
+    color:var(--marigold);
+    font-weight:600;
+    position:relative;
+  }
+  .banner p.tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#C9DAD2;
+    margin-bottom:8px;
+    position:relative;
+  }
+  .top20-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:8px 20px;
+    margin-top:18px;
+    position:relative;
+  }
+  .top20-grid label{
+    display:flex;
+    align-items:baseline;
+    gap:9px;
+    font-size:14.5px;
+    cursor:pointer;
+    padding:5px 0;
+    border-bottom:1px dashed rgba(245,239,224,0.18);
+  }
+  .top20-grid input{accent-color:var(--marigold);width:15px;height:15px;flex-shrink:0;margin-top:2px;}
+  .top20-grid .n{font-family:'IBM Plex Mono',monospace;color:var(--marigold);font-size:12px;width:16px;flex-shrink:0;}
+  .top20-grid label.checked span.txt{opacity:.45;text-decoration:line-through;}
+
+  /* ===== NAV ===== */
+  .nav-wrap{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:rgba(245,239,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    margin-top:44px;
+  }
+  .nav{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:12px 24px;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    white-space:nowrap;
+    text-decoration:none;
+    color:var(--teal-dark);
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:6px 11px;
+    border-radius:20px;
+    flex-shrink:0;
+    transition:background .15s, color .15s;
+  }
+  .nav a:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+
+  /* ===== SEARCH ===== */
+  .search-wrap{
+    max-width:var(--maxw);
+    margin:26px auto 0;
+    padding:0 24px;
+  }
+  .search-wrap input{
+    width:100%;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    padding:12px 16px;
+    border-radius:10px;
+    border:1.5px solid var(--line);
+    background:var(--paper);
+    color:var(--ink);
+    outline:none;
+  }
+  .search-wrap input:focus{border-color:var(--teal);}
+  .search-wrap input::placeholder{color:#A79E82;}
+
+  /* ===== CATEGORY TAGS ===== */
+  .categories{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:20px 24px 30px;
+    position:relative;
+  }
+  .categories::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:0;
+    border-left:2px dashed var(--line);
+    transform:translateX(-50%);
+    z-index:0;
+  }
+  .category{
+    position:relative;
+    z-index:1;
+    background:var(--paper);
+    border:1.5px solid var(--line);
+    border-radius:var(--radius);
+    margin:26px auto;
+    max-width:800px;
+    overflow:hidden;
+  }
+  .cat-head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:18px 22px;
+    background:linear-gradient(90deg, rgba(14,92,88,0.06), transparent);
+    border-bottom:1px solid var(--line-soft);
+    cursor:pointer;
+  }
+  .cat-num{
+    flex-shrink:0;
+    width:40px;height:40px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--teal);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--teal-dark);
+    position:relative;
+  }
+  .cat-num::after{
+    content:"";
+    position:absolute;
+    top:50%;left:-14px;
+    width:12px;height:0;
+    border-top:2px dashed var(--line);
+  }
+  .cat-title{flex:1;}
+  .cat-title h2{font-size:19px;font-weight:600;color:var(--teal-dark);}
+  .cat-title .note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-soft);margin-top:2px;}
+  .cat-count{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--rust);
+    flex-shrink:0;
+    text-align:right;
+    min-width:52px;
+  }
+  .cat-chevron{
+    flex-shrink:0;
+    width:18px;height:18px;
+    color:var(--ink-soft);
+    transition:transform .2s;
+  }
+  .category.collapsed .cat-chevron{transform:rotate(-90deg);}
+  .cat-body{
+    padding:6px 22px 18px;
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .category.collapsed .cat-body{display:none;}
+  .item{
+    display:flex;
+    align-items:flex-start;
+    gap:11px;
+    padding:8px 0;
+    border-bottom:1px dashed var(--line-soft);
+  }
+  .item:last-child{border-bottom:none;}
+  .item input{
+    width:17px;height:17px;
+    margin-top:2px;
+    accent-color:var(--teal);
+    flex-shrink:0;
+    cursor:pointer;
+  }
+  .item label{
+    font-size:14.5px;
+    color:var(--ink);
+    cursor:pointer;
+    flex:1;
+  }
+  .item.checked label{color:#9A9587;text-decoration:line-through;}
+  .item.hidden{display:none;}
+  .item .qty{color:var(--rust);font-family:'IBM Plex Mono',monospace;font-size:12px;}
+  .item .caveat{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--marigold);
+    margin-top:2px;
+  }
+
+  /* ===== PACKING SYSTEM TABS ===== */
+  .system{
+    max-width:800px;
+    margin:10px auto 40px;
+    padding:0 24px;
+  }
+  .system h2{
+    font-size:24px;
+    color:var(--teal-dark);
+    margin-bottom:6px;
+  }
+  .system p.lead{color:var(--ink-soft);font-size:14.5px;margin-bottom:18px;}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+  .tab-btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    padding:8px 14px;
+    border-radius:20px;
+    border:1.5px solid var(--line);
+    background:var(--paper);
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  .tab-btn.active{background:var(--teal-dark);border-color:var(--teal-dark);color:#fff;}
+  .tab-panel{display:none;background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+  .tab-panel.active{display:block;}
+  .tab-panel ul{margin:0;padding-left:18px;}
+  .tab-panel li{margin-bottom:7px;font-size:14.5px;}
+
+  footer{
+    text-align:center;
+    padding:34px 24px 60px;
+    color:var(--ink-soft);
+    font-size:13px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  footer .thread{
+    width:60px;height:0;
+    border-top:2px dashed var(--line);
+    margin:0 auto 16px;
+  }
+
+  @media (max-width:600px){
+    .categories::before{display:none;}
+    .top20-grid{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">Hostel · Coimbatore · First Move-Out</div>
+  <h1>Packing for<br><em>Coimbatore</em></h1>
+  <p class="sub">Everything from hairpins to certificates — check it off as it goes into the bag. Your progress is tracked at the top while you're here.</p>
+</div>
+
+<div class="zipper-wrap">
+  <div class="zipper-stats"><span><strong id="statPacked">0</strong> / <span id="statTotal">0</span> items packed</span><span id="statPct">0%</span></div>
+  <div class="zipper">
+    <div class="zipper-fill" id="zipperFill"></div>
+    <div class="zipper-pull" id="zipperPull" style="left:0%"></div>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="banner-inner">
+    <p class="tag">Do not forget</p>
+    <h2>Top 20 things you absolutely must not forget</h2>
+    <div class="top20-grid" id="top20Grid"></div>
+  </div>
+</div>
+
+<div class="nav-wrap">
+  <nav class="nav" id="navBar"></nav>
+</div>
+
+<div class="search-wrap">
+  <input type="text" id="searchBox" placeholder="Search the whole list — e.g. 'sanitary', 'charger', 'lock'…">
+</div>
+
+<div class="categories" id="categories"></div>
+<div style="max-width:920px;margin:24px auto 50px;padding:0 24px;text-align:center;">
+<button id="resetProgress" style="border:1px solid #D9CDA9;background:#FFFDF6;color:#B23A48;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;">Reset all checked items</button>
+<div style="margin-top:8px;color:#5B675F;font-size:12px;">Your checklist progress is saved on this device.</div>
+</div>
+
+<div class="system">
+  <h2>Final packing system</h2>
+  <p class="lead">One last sort before the bags close.</p>
+  <div class="tabs" id="tabBar"></div>
+  <div id="tabPanels"></div>
+</div>
+
+<footer>
+  <div class="thread"></div>
+  Made for the girl who's packing her whole hostel life into two bags.<br>
+  Everything above doubles as your master checklist — no need for a separate one.
+</footer>
+
+<script>
+const DATA = [
+  {n:1, title:"Important documents & photocopies", note:"Originals + photocopies, scanned to cloud", items:[
+    "Aadhaar card — original + 4 photocopies",
+    "PAN card, if applicable — original + 2 photocopies",
+    "Passport, if applicable — original + 2 photocopies",
+    "10th certificate & marksheet — original + 3 copies",
+    "12th certificate & marksheet — original + 3 copies",
+    "Transfer Certificate (TC) — original + 2 copies",
+    "Migration Certificate, if applicable — original + 2 copies",
+    "Community/caste certificate, if applicable — original + 2 copies",
+    "Income certificate, if applicable — original + 2 copies",
+    "Domicile/residence certificate, if applicable — original + 2 copies",
+    "Nativity certificate, if applicable",
+    "College admission/offer letter — 2 copies",
+    "Fee payment receipts — 2 copies each",
+    "Hostel admission/allotment letter — 2 copies",
+    "Entrance exam scorecard/rank card, if applicable",
+    "Passport-size photos — 15–20",
+    "Stamp-size photos — 6–8, if specified",
+    "Medical fitness certificate/health form for college",
+    "Vaccination certificate (e.g. Hepatitis B)",
+    "Blood group report/card",
+    "Bank passbook + first page photocopy",
+    "Cancelled cheque, if needed",
+    "Insurance documents, if applicable",
+    "Scholarship documents, if applicable",
+    "Ration card copy (address proof)",
+    "Address proof of parent/guardian",
+    "Emergency contact list — written on paper",
+    "A dedicated document folder/pouch, waterproof if possible",
+    "Digital scans of every document — phone + email + cloud",
+    "Anti-ragging affidavit form, if required||Check your course/college requirements",
+    "Undertaking/consent forms signed by parents, if required||Check your course/college requirements",
+  ]},
+  {n:2, title:"Clothes", note:"", items:[
+    "Everyday college outfits — 6–8 sets",
+    "Jeans/pants/leggings/palazzos — 5–6",
+    "Kurtis/tops/shirts — 6–8",
+    "Formal wear for presentations/seminars — 2 sets",
+    "Traditional/ethnic wear for festivals — 2–3 sets",
+    "Nightwear — 3–4 sets",
+    "Innerwear (panties) — 10–14 pairs",
+    "Bras, incl. 1–2 sports bras — 5–6",
+    "Socks — 6–8 pairs",
+    "Dupattas/stoles — 3–4",
+    "Workout/sports clothes — 2–3 sets",
+    "Raincoat or poncho — 1",
+    "Sweater/jacket/shawl — 1–2",
+    "One good outfit for fests/farewells — 1–2",
+    "Bath towels — 2",
+    "Face/hand towels — 2",
+    "Handkerchiefs — 4–5",
+    "Undergarment slips/camisoles, if worn — 3–4",
+    "Safety pins kept on a spare dupatta/kurti",
+    "Old/comfortable clothes for chores, lounging — 2 sets",
+  ]},
+  {n:3, title:"Footwear", note:"", items:[
+    "College-appropriate shoes — 1 pair",
+    "Casual footwear for outings — 1 pair",
+    "Sandals — 1 pair",
+    "Room slippers/flip-flops — 1 pair",
+    "Bathroom slippers, non-slip, dedicated — 1 pair",
+    "Sports shoes — 1 pair",
+    "Rain-friendly waterproof sandals — 1 pair",
+    "One extra pair of everyday slippers as backup",
+  ]},
+  {n:4, title:"Toiletries", note:"Even the tiny things", items:[
+    "Toothbrush — 2",
+    "Toothpaste — 1 (refill locally)",
+    "Tongue cleaner",
+    "Soap/body wash",
+    "Face wash",
+    "Shampoo",
+    "Conditioner",
+    "Hair oil",
+    "Wide-tooth comb",
+    "Hairbrush",
+    "Hair ties/rubber bands — 10–15",
+    "Hair clips — 4–6",
+    "Claw clips — 2–3",
+    "Hairpins (U-pins) — 15–20",
+    "Bobby pins — 10–15",
+    "Scrunchies — 3–4",
+    "Sanitary pads/tampons/menstrual cup — 2–3 months' stock",
+    "Pantyliners",
+    "Intimate hygiene wash, if used",
+    "Disposal bags for sanitary waste",
+    "Deodorant/roll-on",
+    "Perfume/body mist — small bottle",
+    "Moisturizer/body lotion",
+    "Sunscreen",
+    "Lip balm — 1–2",
+    "Petroleum jelly",
+    "Hand wash",
+    "Hand sanitizer",
+    "Nail cutter",
+    "Nail file",
+    "Tweezers",
+    "Cotton buds",
+    "Cotton pads",
+    "Tissues — 3–4 pocket packs + 1 box",
+    "Wet wipes — 1–2 packs",
+    "Toilet paper roll — 1–2",
+    "Razor + spare blades",
+    "Shaving cream/gel",
+    "Small mirror",
+    "Laundry soap/detergent — small pack to start",
+  ]},
+  {n:5, title:"Skincare & basic makeup", note:"Practical, not a full vanity", items:[
+    "Sunscreen SPF 30+",
+    "Moisturizer",
+    "Gentle face cleanser",
+    "Lip balm/tinted balm",
+    "Compact powder",
+    "Kajal/kohl pencil",
+    "Eyeliner",
+    "Mascara, if used",
+    "One everyday lipstick/tinted lip product",
+    "Makeup remover or micellar water",
+    "Cotton pads",
+    "Small makeup pouch",
+    "Eyebrow trimmer/threading kit, if used at home",
+    "Face masks/sheet masks — optional",
+  ]},
+  {n:6, title:"Bathroom & hostel items", note:"", items:[
+    "Bucket — check if hostel provides",
+    "Mug",
+    "Bath slippers, non-slip",
+    "Toiletry bag/hanging organizer",
+    "Shower caddy or basket",
+    "Extra towel for bathroom use",
+    "Laundry bag — mesh or cloth",
+    "Hangers — 8–10",
+    "Clothespins/clips — 15–20",
+    "Small clothesline/rope",
+    "Ziplock/storage bags — assorted sizes",
+    "Waterproof pouch for wet clothes",
+  ]},
+  {n:7, title:"Bedding & room essentials", note:"", items:[
+    "Bedsheets — 2–3, confirm mattress size first",
+    "Pillow — 1",
+    "Pillow covers — 2–3",
+    "Blanket/comforter, light",
+    "Bedsheet clips/grippers — 4",
+    "Mattress protector, if useful",
+    "Mosquito net or repellent",
+    "Small room organizer/hanging shelf",
+    "Storage boxes, stackable",
+    "Under-bed storage bags, if bed height allows",
+    "Small table lamp, if desk lighting is dim",
+    "Curtain/partition cloth, if wanted — check hostel rules",
+  ]},
+  {n:8, title:"College / study supplies", note:"", items:[
+    "Backpack",
+    "Notebooks — 6–8 to start",
+    "Rough notebook/notepad — 1–2",
+    "Pens — 10–12",
+    "Pencils — 2–3",
+    "Eraser — 2",
+    "Sharpener — 1–2",
+    "Ruler/scale",
+    "Highlighters — 3–4 colors",
+    "Sticky notes/tabs",
+    "Files/folders — 3–4",
+    "Stapler + staples",
+    "Paper clips/binder clips",
+    "Calculator, if required||Check your course/college requirements",
+    "Scientific calculator, if required||Check your course/college requirements",
+    "Lab coat, goggles, apron or lab kit||Check your course/college requirements",
+    "Drafting/drawing kit||Check your course/college requirements",
+    "ID card holder/lanyard",
+    "Small stationery pouch",
+  ]},
+  {n:9, title:"Electronics", note:"Confirm restrictions with hostel first", items:[
+    "Phone",
+    "Phone charger",
+    "Spare charging cable",
+    "Power bank",
+    "Laptop, if required||Check your course/college requirements",
+    "Laptop charger",
+    "Earphones/headphones",
+    "Small extension board/power strip — confirm hostel rule",
+    "Multi-plug adapter, if needed",
+    "USB drive/pen drive",
+    "External hard drive — optional",
+    "Smartwatch + charger, if used",
+    "Basic calculator for daily use",
+  ]},
+  {n:10, title:"Medicines & basic first-aid", note:"General preparedness, not a prescription", items:[
+    "Personal prescription medicines — 1–2 months' supply",
+    "Photocopies of prescriptions",
+    "Written note of allergies/medical conditions",
+    "Band-aids/adhesive bandages",
+    "Antiseptic liquid/cream",
+    "Cotton roll and gauze",
+    "Digital thermometer",
+    "ORS sachets",
+    "A basic fever/pain reliever, only if already used normally — else ask a doctor/pharmacist",
+    "Motion sickness medicine, if needed for travel",
+    "Menstrual cramp relief, whatever normally works for you",
+    "Extra menstrual products, stored separately",
+    "Small first-aid pouch",
+    "Emergency medical info card: blood group, allergies, medication",
+    "Parent/guardian contact written down",
+    "College/hostel warden & medical room contact, once known",
+  ]},
+  {n:11, title:"Food & snacks", note:"Check hostel rules on storage & cooking", items:[
+    "Dry snacks — enough for 1–2 weeks",
+    "Biscuits",
+    "Nuts/dry fruits",
+    "Instant foods, only if hostel allows cooking/hot water",
+    "Reusable water bottle",
+    "Lunch box",
+    "Spoon and fork, reusable",
+    "Steel mug/tumbler",
+    "Small airtight containers",
+    "Tea/coffee sachets, if allowed",
+  ]},
+  {n:12, title:"Laundry & cleaning", note:"", items:[
+    "Detergent — small pack to start",
+    "Laundry bag/basket",
+    "Cloth clips/clothespins",
+    "Small cleaning brush for stains",
+    "Stain remover bar/spray",
+    "Shoe-cleaning items",
+    "Small cleaning cloth/duster",
+    "Garbage bags, small size",
+    "A small dustbin for your side of the room",
+  ]},
+  {n:13, title:"Safety & emergency items", note:"", items:[
+    "Small padlock for cupboard/trunk",
+    "Spare keys, kept separately",
+    "Written emergency contact list",
+    "Small flashlight/torch",
+    "Whistle",
+    "Pepper spray — only if legal in your state and hostel-approved||Confirm legality & hostel rule first",
+    "Photocopies of important documents, kept separately",
+    "Emergency cash, in a separate pouch",
+    "Backup payment method",
+  ]},
+  {n:14, title:"Money & banking", note:"", items:[
+    "Debit/ATM card",
+    "UPI app set up and linked",
+    "Net banking login noted securely",
+    "Emergency cash, kept separately",
+    "Everyday wallet/card holder",
+    "Banking helpline numbers noted down",
+    "Parent's contact linked as backup",
+  ]},
+  {n:15, title:"Bags & organization", note:"", items:[
+    "Main suitcase/trolley, with a lock",
+    "College backpack",
+    "Small sling bag/handbag",
+    "Laundry bag",
+    "Toiletry pouch",
+    "Makeup pouch",
+    "Document folder",
+    "Shoe bags",
+    "Small pouches for cables & odds and ends",
+    "Ziplock bags, assorted sizes",
+    "Waterproof/rain cover for your bag",
+  ]},
+  {n:16, title:"Jewellery & personal items", note:"Keep it minimal for hostel safety", items:[
+    "Minimal everyday jewellery — only what you'd be okay losing",
+    "One watch, if worn",
+    "Sunglasses",
+    "A diary/journal, if kept",
+    "One small comfort item — a photo or memento",
+  ]},
+  {n:17, title:"Travel-day bag", note:"Kept with you during the journey, not packed away", items:[
+    "All original documents + photocopies",
+    "Phone + charger",
+    "Power bank",
+    "Wallet with cash, card, ID",
+    "Water bottle",
+    "Snacks for the journey",
+    "Tissues and wet wipes",
+    "Sanitary products",
+    "Regular + basic travel medicines",
+    "One change of clothes",
+    "Light shawl/jacket for AC buses/trains",
+    "Earphones",
+    "Printed/downloaded tickets & hostel letter",
+    "Important contacts written on paper",
+    "A small lock for your travel bag",
+  ]},
+  {n:18, title:"Things to buy after reaching Coimbatore", note:"Bulky or easily available locally", items:[
+    "Bucket and mug, if not provided",
+    "Extra hangers",
+    "Large detergent packs/refills",
+    "Bigger toiletry stock, once you find local shops",
+    "Steel plate/glass, if mess doesn't provide one",
+    "Extra storage boxes/organizers",
+    "Local SIM card or prepaid recharge",
+    "Umbrella",
+    "Snacks and daily groceries, ongoing",
+    "Stationery refills, as semester progresses",
+    "Study lamp/room décor, once settled in",
+    "Bulky electronic accessories, not urgent for day one",
+  ]},
+  {n:19, title:"Things girls often forget", note:"", items:[
+    "Hairpins and bobby pins — always fewer than you think",
+    "Safety pins",
+    "Extra innerwear",
+    "Nail cutter",
+    "Laundry clips",
+    "Extension board, if hostel allows",
+    "Photocopies of every document",
+    "Extra passport-size photos",
+    "A small padlock",
+    "Full sanitary product stock, not just 'enough for now'",
+    "Prescription copies",
+    "A spare phone charging cable",
+    "Needle and thread/small sewing kit",
+    "A stain-remover pen for outfit emergencies",
+    "A doorstop or extra latch, if the door doesn't lock well",
+    "Ear buds/cotton swabs",
+    "Spare spectacles/contact lens solution, if worn",
+  ]},
+  {n:20, title:"Hostel rule check", note:"Confirm before you finish packing", items:[
+    "Is an electric kettle allowed?",
+    "Is an iron allowed, or is there a common ironing room?",
+    "Is an induction stove/cooking appliance allowed?",
+    "Is a hair dryer/straightener allowed?",
+    "Is an extension board allowed — any wattage limit?",
+    "What food/appliance restrictions exist in rooms?",
+    "Is mattress/bedding provided?",
+    "Are bucket and mug provided?",
+    "What laundry facilities exist?",
+    "Is Wi-Fi provided — need a backup device/dongle?",
+    "Is there a dress code for hostel/mess hall?",
+    "What are the visitor rules?",
+    "What is the curfew/gate-closing time?",
+    "Is there a locker/storage facility for valuables?",
+    "What items are explicitly prohibited?",
+    "Is there a common fridge, or is a personal one allowed?",
+    "What is the room-sharing arrangement?",
+    "Any restriction on wall decorations/posters/nails?",
+  ]},
+];
+
+const TOP20 = [
+  "Original documents (Aadhaar, 10th/12th, TC, admission letter)",
+  "Photocopies of every document",
+  "Passport-size photos, extra stock",
+  "Bank card + banking access",
+  "Emergency cash, kept separately",
+  "Phone + charger + power bank",
+  "Prescription medicines + prescription copies",
+  "Full sanitary product stock",
+  "Basic first-aid pouch",
+  "Innerwear and nightwear for 10–12 days",
+  "Bedsheet, pillow, and a light blanket",
+  "Toiletries starter kit",
+  "Hairpins, bobby pins, hair ties, comb",
+  "A small padlock for your cupboard/trunk",
+  "Laptop + charger, if required by your course",
+  "Water bottle and a lunch box",
+  "Written emergency contact list",
+  "ID card holder/lanyard and stationery basics",
+  "Umbrella or raincoat",
+  "Comfortable everyday footwear + bathroom slippers",
+];
+
+const SYSTEM = {
+  "must-take":{label:"Must take from home", items:[
+    "All original documents + photocopies + passport photos",
+    "Prescription medicines and prescription copies",
+    "Everyday clothes, innerwear, nightwear",
+    "Footwear basics",
+    "A starter stock of toiletries and sanitary products",
+    "Bedsheet, pillow, and one blanket, until hostel provisions are confirmed",
+    "Study supplies you already own",
+    "Electronics: phone, laptop if needed, chargers, power bank",
+    "Basic first-aid pouch",
+    "Safety items: small lock, whistle, emergency cash",
+    "Bank card and banking details",
+  ]},
+  "if-space":{label:"Take if space allows", items:[
+    "Extra clothes for events/festivals",
+    "A couple of storage boxes/organizers",
+    "A small lamp or room décor item",
+    "Books you already own, if needed from day one",
+    "Extra bedding/blanket",
+    "A journal or personal comfort item",
+  ]},
+  "buy-later":{label:"Buy after reaching Coimbatore", items:[
+    "Bucket, mug, larger toiletry refills",
+    "Extra hangers, storage boxes",
+    "Local SIM/recharge",
+    "Umbrella",
+    "Ongoing groceries and stationery refills",
+    "Anything hostel confirms is provided",
+  ]},
+  "check-first":{label:"Do not bring / check hostel rules first", items:[
+    "Electric kettle, induction stove, iron, hair dryer",
+    "Expensive/heavy jewellery",
+    "Pepper spray or any safety item with legal restrictions",
+    "High-wattage extension boards",
+    "Any appliance not explicitly confirmed as allowed",
+  ]},
+};
+
+let TOTAL_ITEMS = 0;
+let PACKED_ITEMS = 0;
+
+function slug(title){return title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');}
+
+function updateProgress(){
+  const pct = TOTAL_ITEMS ? Math.round((PACKED_ITEMS/TOTAL_ITEMS)*100) : 0;
+  document.getElementById('statPacked').textContent = PACKED_ITEMS;
+  document.getElementById('statTotal').textContent = TOTAL_ITEMS;
+  document.getElementById('statPct').textContent = pct + '%';
+  document.getElementById('zipperFill').style.width = pct + '%';
+  document.getElementById('zipperPull').style.left = pct + '%';
+}
+
+function updateCatCount(catEl){
+  const items = catEl.querySelectorAll('.item');
+  const checked = catEl.querySelectorAll('.item.checked').length;
+  catEl.querySelector('.cat-count').textContent = checked + '/' + items.length;
+}
+
+function saveProgress(){
+  const state={};
+  document.querySelectorAll('.item input[type=checkbox]').forEach(cb=>state[cb.id]=cb.checked);
+  document.querySelectorAll('#top20Grid input[type=checkbox]').forEach((cb,i)=>state['top20-'+i]=cb.checked);
+  localStorage.setItem('coimbatore-hostel-checklist', JSON.stringify(state));
+}
+
+function restoreProgress(){
+  let state={};
+  try { state=JSON.parse(localStorage.getItem('coimbatore-hostel-checklist')||'{}')||{}; } catch(e) {}
+  document.querySelectorAll('.item input[type=checkbox]').forEach(cb=>{
+    if(state[cb.id]) { cb.checked=true; cb.closest('.item').classList.add('checked'); PACKED_ITEMS++; }
+  });
+  document.querySelectorAll('#top20Grid input[type=checkbox]').forEach((cb,i)=>{
+    if(state['top20-'+i]) { cb.checked=true; cb.closest('label').classList.add('checked'); }
+  });
+  document.querySelectorAll('.category').forEach(updateCatCount);
+  updateProgress();
+}
+
+function resetProgress(){
+  if(!confirm('Reset every checked item on this device?')) return;
+  localStorage.removeItem('coimbatore-hostel-checklist');
+  location.reload();
+}
+
+function buildCategories(){
+  const wrap = document.getElementById('categories');
+  const nav = document.getElementById('navBar');
+  DATA.forEach(cat=>{
+    const id = 'cat-' + cat.n;
+    const a = document.createElement('a');
+    a.href = '#' + id;
+    a.textContent = cat.n + '. ' + cat.title;
+    nav.appendChild(a);
+
+    const el = document.createElement('div');
+    el.className = 'category';
+    el.id = id;
+    el.innerHTML = `
+      <div class="cat-head">
+        <div class="cat-num">${String(cat.n).padStart(2,'0')}</div>
+        <div class="cat-title">
+          <h2>${cat.title}</h2>
+          ${cat.note ? `<div class="note">${cat.note}</div>` : ''}
+        </div>
+        <div class="cat-count">0/${cat.items.length}</div>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="cat-body"></div>
+    `;
+    const body = el.querySelector('.cat-body');
+    cat.items.forEach((raw, i)=>{
+      const [text, caveat] = raw.split('||');
+      const itemId = id + '-item-' + i;
+      const row = document.createElement('div');
+      row.className = 'item';
+      row.dataset.search = text.toLowerCase();
+      row.innerHTML = `
+        <input type="checkbox" id="${itemId}">
+        <label for="${itemId}">${text}${caveat ? `<span class="caveat">${caveat}</span>` : ''}</label>
+      `;
+      const cb = row.querySelector('input');
+      cb.addEventListener('change', ()=>{
+        row.classList.toggle('checked', cb.checked);
+        PACKED_ITEMS += cb.checked ? 1 : -1;
+        updateCatCount(el);
+        updateProgress();
+      });
+      body.appendChild(row);
+      TOTAL_ITEMS++;
+    });
+
+    el.querySelector('.cat-head').addEventListener('click', (e)=>{
+      el.classList.toggle('collapsed');
+    });
+
+    wrap.appendChild(el);
+  });
+  updateProgress();
+}
+
+function buildTop20(){
+  const grid = document.getElementById('top20Grid');
+  TOP20.forEach((text,i)=>{
+    const label = document.createElement('label');
+    label.innerHTML = `<span class="n">${String(i+1).padStart(2,'0')}</span><input type="checkbox"><span class="txt">${text}</span>`;
+    const cb = label.querySelector('input');
+    cb.addEventListener('change', ()=>{ label.classList.toggle('checked', cb.checked); saveProgress(); });
+    grid.appendChild(label);
+  });
+}
+
+function buildSystem(){
+  const tabBar = document.getElementById('tabBar');
+  const panels = document.getElementById('tabPanels');
+  let first = true;
+  Object.entries(SYSTEM).forEach(([key,val])=>{
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (first ? ' active':'');
+    btn.textContent = val.label;
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-'+key).classList.add('active');
+    });
+    tabBar.appendChild(btn);
+
+    const panel = document.createElement('div');
+    panel.className = 'tab-panel' + (first ? ' active':'');
+    panel.id = 'panel-'+key;
+    panel.innerHTML = '<ul>' + val.items.map(i=>`<li>${i}</li>`).join('') + '</ul>';
+    panels.appendChild(panel);
+    first = false;
+  });
+}
+
+function setupSearch(){
+  const box = document.getElementById('searchBox');
+  box.addEventListener('input', ()=>{
+    const q = box.value.trim().toLowerCase();
+    document.querySelectorAll('.category').forEach(cat=>{
+      let anyVisible = false;
+      cat.querySelectorAll('.item').forEach(item=>{
+        const match = !q || item.dataset.search.includes(q);
+        item.classList.toggle('hidden', !match);
+        if(match) anyVisible = true;
+      });
+      cat.style.display = anyVisible ? '' : 'none';
+      if(q && anyVisible) cat.classList.remove('collapsed');
+    });
+  });
+}
+
+buildCategories();
+buildTop20();
+buildSystem();
+setupSearch();
+restoreProgress();
+document.getElementById('resetProgress').addEventListener('click', resetProgress);
+if ('serviceWorker' in navigator) { window.addEventListener('load', ()=>navigator.serviceWorker.register('./sw.js')); }
+</script>
+</body>
+</html>
